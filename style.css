@@ -3,6 +3,7 @@ body {
   height: 100vh;
 }
 
+/* CONSOLE STYLES */
 .console {
   margin: 0 auto;
   height: clamp(300px, 70vw, 650px);
@@ -21,8 +22,13 @@ body {
   border: inset 2px rgb(231, 231, 231);
   border-radius: 15px;
   box-shadow: 0 0 2px 2px rgb(43, 43, 43);
+
+  display: grid;
+  grid-template-columns: repeat(80, 1fr);
+  grid-template-rows: repeat(60, 1fr);
 }
 
+/* CONSOLE BASE */
 .console__base {
   display: flex;
   justify-content: space-between;
@@ -52,4 +58,13 @@ body {
   border-radius: 20px;
   margin-top: clamp(20px, 50%, 50px);
   box-shadow: 0 0 1px 1px rgba(59, 59, 59, 0.603);
+}
+
+/* ETCH A SKETCH PLAY */
+/* .sketch__square {
+  border: solid 1px black;
+} */
+
+.active {
+  background: rgb(49, 49, 49);
 }
