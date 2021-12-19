@@ -12,6 +12,51 @@
   </head>
 
   <body>
+    <header>
+      <div class="toolbar">
+        <div class="toolbar__directions">
+          <p class="toolbar__text">Select resolution to begin.</p>
+        </div>
+
+        <div class="toolbar__options">
+          <form class="options__form">
+            <div class="option__container">
+              <input
+                type="radio"
+                id="low"
+                name="resolution"
+                value="low-res"
+                class="radio__selection"
+              />
+              <label for="low">low-res</label>
+            </div>
+            <div class="option__container">
+              <input
+                type="radio"
+                id="med"
+                name="resolution"
+                value="med-res"
+                class="radio__selection"
+              />
+              <label for="med">med-res</label>
+            </div>
+            <div class="option__container">
+              <input
+                type="radio"
+                id="hi"
+                name="resolution"
+                value="hi-res"
+                class="radio__selection"
+              />
+              <label for="hi">hi-res</label>
+            </div>
+          </form>
+        </div>
+        <div class="toolbar__actions">
+          <button class="toolbar__btn" id="btn__clear">Clear</button>
+        </div>
+      </div>
+    </header>
     <main>
       <div class="console">
         <div class="console__screen"></div>

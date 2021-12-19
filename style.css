@@ -1,9 +1,128 @@
+/* 
+#####TABLE OF CONTENTS#######
+
+#format
+#background
+#tool bar
+#console styles
+#console base
+#play states
+###############################
+*/
+
+/* #FORMAT */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: clamp(7px, 1.5vw, 15px);
+}
+
+/* #BACKGROUND */
 body {
   background-color: rgb(49, 49, 49);
   height: 100vh;
 }
 
-/* CONSOLE STYLES */
+/* #TOOL BAR */
+.toolbar {
+  border-radius: 20px;
+  border: ridge 3px silver;
+  height: clamp(0, 10vw, 80px);
+  width: 90%;
+  max-width: 650px;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 234, 190, 1) 0%,
+    rgba(219, 139, 130, 1) 13%,
+    rgba(224, 165, 141, 1) 35%,
+    rgba(241, 175, 129, 1) 66%,
+    rgba(233, 120, 116, 1) 89%,
+    rgba(224, 222, 139, 1) 100%
+  );
+  margin: 2vw auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: clamp(8px, 2vw, 12px);
+}
+
+.toolbar__directions {
+  border-radius: 20px;
+  width: 20%;
+  height: 65px;
+  margin: 1vw;
+  border: double 3px gray;
+  padding: 0 4vw;
+  background: linear-gradient(
+    90deg,
+    rgba(190, 231, 240, 1) 0%,
+    rgba(130, 151, 219, 1) 13%,
+    rgba(141, 141, 224, 1) 35%,
+    rgba(129, 152, 241, 1) 66%,
+    rgba(116, 164, 233, 1) 89%,
+    rgba(139, 210, 224, 1) 100%
+  );
+}
+
+.toolbar__options {
+  border-radius: 20px;
+  width: 20%;
+  height: 65px;
+  border: double 3px gray;
+  padding-left: 4vw;
+  background: linear-gradient(
+    90deg,
+    rgba(190, 231, 240, 1) 0%,
+    rgba(130, 151, 219, 1) 13%,
+    rgba(141, 141, 224, 1) 35%,
+    rgba(129, 152, 241, 1) 66%,
+    rgba(116, 164, 233, 1) 89%,
+    rgba(139, 210, 224, 1) 100%
+  );
+}
+
+.toolbar__actions {
+  border-radius: 20px;
+  width: 20%;
+  border: double 3px gray;
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(190, 231, 240, 1) 0%,
+    rgba(130, 151, 219, 1) 13%,
+    rgba(141, 141, 224, 1) 35%,
+    rgba(129, 152, 241, 1) 66%,
+    rgba(116, 164, 233, 1) 89%,
+    rgba(139, 210, 224, 1) 100%
+  );
+}
+
+.toolbar__btn {
+  border-radius: 10px;
+  padding: 4px 8px;
+  box-shadow: 0 0 2px 1px rgb(80, 80, 80);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(32, 80, 227, 1) 13%,
+    rgba(41, 41, 219, 1) 35%,
+    rgba(32, 61, 172, 1) 66%,
+    rgba(25, 92, 189, 1) 89%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: yellow;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toolbar__btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 3px 2px rgb(248, 84, 84);
+}
+
+/* #CONSOLE STYLES */
 .console {
   margin: 0 auto;
   height: clamp(300px, 70vw, 650px);
@@ -22,13 +141,27 @@ body {
   border: inset 2px rgb(231, 231, 231);
   border-radius: 15px;
   box-shadow: 0 0 2px 2px rgb(43, 43, 43);
+}
 
+.hi__res {
   display: grid;
   grid-template-columns: repeat(80, 1fr);
   grid-template-rows: repeat(60, 1fr);
 }
 
-/* CONSOLE BASE */
+.med__res {
+  display: grid;
+  grid-template-columns: repeat(48, 1fr);
+  grid-template-rows: repeat(36, 1fr);
+}
+
+.low__res {
+  display: grid;
+  grid-template-columns: repeat(28, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+
+/* #CONSOLE BASE */
 .console__base {
   display: flex;
   justify-content: space-between;
@@ -60,10 +193,7 @@ body {
   box-shadow: 0 0 1px 1px rgba(59, 59, 59, 0.603);
 }
 
-/* ETCH A SKETCH PLAY */
-/* .sketch__square {
-  border: solid 1px black;
-} */
+/* #PLAY STATES */
 
 .active {
   background: rgb(49, 49, 49);
